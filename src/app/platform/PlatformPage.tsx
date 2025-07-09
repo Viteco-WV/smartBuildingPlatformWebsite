@@ -1,4 +1,5 @@
-"use client"
+"use client";
+export const dynamic = "force-dynamic";
 import React, { useState } from 'react';
 import { Zap, Thermometer, Wind, Brain, Building2, ChevronRight, TrendingUp, Linkedin, Youtube, ArrowLeft, Database, Tag, BarChart3, LayoutDashboard, Settings } from 'lucide-react';
 import { RouterLink } from '@/components/Router';
@@ -13,8 +14,11 @@ import CaseStudiesSectionHeader from '@/components/CaseStudiesSectionHeader';
 const PlatformPage = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const searchParams = useSearchParams();
-  const initialTab = searchParams?.get('module') || 'energy';
-  const [activeTab, setActiveTab] = useState(initialTab);
+  const [activeTab, setActiveTab] = useState('energy');
+  React.useEffect(() => {
+    const moduleParam = searchParams?.get('module');
+    if (moduleParam) setActiveTab(moduleParam);
+  }, [searchParams]);
 
   const modules = [
     {

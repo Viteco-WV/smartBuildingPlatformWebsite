@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 
 const Vacature1 = () => {
   const [showModal, setShowModal] = useState(false);
-  const [form, setForm] = useState({ name: '', email: '', phone: '', motivation: '', file: null });
+  const [form, setForm] = useState<{ name: string; email: string; phone: string; motivation: string; file: File | null }>({ name: '', email: '', phone: '', motivation: '', file: null });
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState('');
