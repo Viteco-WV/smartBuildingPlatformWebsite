@@ -21,19 +21,32 @@ interface FormData {
   preferences: Preference[];
 }
 
-const DemoRequestPage = () => {
-  const [formData, setFormData] = useState<FormData>({
+export default function DemoRequestPage() {
+  // Zet de hele pagina op een witte achtergrond
+  return (
+    <div className="min-h-screen bg-white">
+      {/* rest van de pagina */}
+      <MainDemoContent />
+    </div>
+  );
+}
+
+function MainDemoContent() {
+  const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     email: '',
     phone: '',
     comments: '',
     preferences: [
-      { date: null, time: '' },
-      { date: null, time: '' },
-      { date: null, time: '' }
+      { date: null as Date | string | null, time: '' },
+      { date: null as Date | string | null, time: '' },
+      { date: null as Date | string | null, time: '' }
     ]
   });
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState('');
 
   const timeSlots = [
     '09:00', '10:00', '11:00', '13:00', '14:00', '15:00', '16:00'
@@ -52,8 +65,8 @@ const DemoRequestPage = () => {
   const handleDateChange = (date: Date | null, index: number) => {
     setFormData(prev => ({
       ...prev,
-      preferences: prev.preferences.map((pref, i) => 
-        i === index ? { ...pref, date } : pref
+      preferences: prev.preferences.map((pref, i) =>
+        i === index ? { ...pref, date: date ? date.toISOString().split('T')[0] : null } : pref
       )
     }));
   };
@@ -61,20 +74,56 @@ const DemoRequestPage = () => {
   const handleTimeChange = (time: string, index: number) => {
     setFormData(prev => ({
       ...prev,
-      preferences: prev.preferences.map((pref, i) => 
+      preferences: prev.preferences.map((pref, i) =>
         i === index ? { ...pref, time } : pref
       )
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
-    console.log('Form submitted:', formData);
+    setLoading(true);
+    setSuccess(false);
+    setError('');
+    try {
+      const res = await fetch('/api/demo', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...formData,
+          preferences: formData.preferences.map(p => ({
+            date: p.date || null,
+            time: p.time
+          }))
+        })
+      });
+      if (res.ok) {
+        setSuccess(true);
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          comments: '',
+          preferences: [
+            { date: null, time: '' },
+            { date: null, time: '' },
+            { date: null, time: '' }
+          ]
+        });
+      } else {
+        const data = await res.json();
+        setError(data.error || 'Er is iets misgegaan. Probeer het later opnieuw.');
+      }
+    } catch (err: any) {
+      setError('Er is iets misgegaan. Probeer het later opnieuw.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       <Header />
       {/* Breadcrumb */}
       <div className="bg-gray-50 py-4">
@@ -85,16 +134,16 @@ const DemoRequestPage = () => {
               Home
             </RouterLink>
             <ChevronRight className="h-4 w-4 text-gray-400" />
-            <span className="text-emerald-600 font-semibold">Demo aanvragen</span>
+            <span className="text-[#00e886] font-semibold">Demo aanvragen</span>
           </div>
         </div>
       </div>
       {/* Main Content */}
-      <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="bg-white rounded-2xl shadow-lg p-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-6">Demo Aanvragen</h1>
+      <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-white">
+        <div className="bg-gray-50 rounded-2xl shadow-lg p-8">
+          <h1 className="text-3xl font-bold text-black mb-6">Aanvraag formulier</h1>
           <p className="text-gray-600 mb-8">
-            Vul het formulier in om een demo aan te vragen. We nemen binnen 24 uur contact met u op om de details te bespreken.
+            Vul het formulier in voor het plannen van een gesprek om een demo te faciliteren. We nemen binnen 24 uur contact met u op om de details te bespreken.
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -110,7 +159,7 @@ const DemoRequestPage = () => {
                   required
                   value={formData.firstName}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 bg-white"
                 />
               </div>
               <div>
@@ -124,7 +173,7 @@ const DemoRequestPage = () => {
                   required
                   value={formData.lastName}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 bg-white"
                 />
               </div>
             </div>
@@ -140,7 +189,7 @@ const DemoRequestPage = () => {
                 required
                 value={formData.email}
                 onChange={handleInputChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 bg-white"
               />
             </div>
 
@@ -154,7 +203,7 @@ const DemoRequestPage = () => {
                 name="phone"
                 value={formData.phone}
                 onChange={handleInputChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 bg-white"
               />
             </div>
 
@@ -168,14 +217,14 @@ const DemoRequestPage = () => {
                 value={formData.comments}
                 onChange={handleInputChange}
                 rows={4}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 bg-white"
                 placeholder="Beschrijf hier waar u specifiek op in wilt gaan tijdens de demo..."
               />
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-lg font-medium text-gray-900">Voorkeur voor datum en tijd</h3>
-              <p className="text-sm text-gray-600">Geef drie voorkeuren op voor een datum en tijdstip voor de demo.</p>
+              <h3 className="text-lg font-medium text-gray-900">Voorkeur voor datum en tijd  (optioneel)</h3>
+              <p className="text-sm text-gray-600">Wij ontvangen graag drie agenda voorkeuren die u goed uitkomen.</p>
               
               {formData.preferences.map((pref, index) => (
                 <div key={index} className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 bg-gray-50 rounded-lg">
@@ -185,11 +234,11 @@ const DemoRequestPage = () => {
                     </label>
                     <div className="relative">
                       <DatePicker
-                        selected={pref.date}
+                        selected={pref.date ? new Date(pref.date) : null}
                         onChange={(date: Date | null) => handleDateChange(date, index)}
                         minDate={new Date()}
                         dateFormat="dd/MM/yyyy"
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 bg-white"
                         placeholderText="Selecteer een datum"
                       />
                       <Calendar className="absolute right-3 top-2.5 h-5 w-5 text-gray-400" />
@@ -202,7 +251,7 @@ const DemoRequestPage = () => {
                     <select
                       value={pref.time}
                       onChange={(e) => handleTimeChange(e.target.value, index)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 bg-white"
                     >
                       <option value="">Selecteer een tijdstip</option>
                       {timeSlots.map((time) => (
@@ -219,10 +268,13 @@ const DemoRequestPage = () => {
             <div className="pt-4">
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-emerald-400 to-green-500 text-white px-6 py-3 rounded-lg hover:from-emerald-500 hover:to-green-600 transition-all font-semibold"
+                className="w-full bg-[#00e886] text-white px-6 py-3 rounded-lg hover:bg-[#00d676] transition-all font-semibold disabled:opacity-60"
+                disabled={loading}
               >
-                Plan een kennismaking
+                {loading ? 'Versturen...' : 'Plan een kennismaking'}
               </button>
+              {success && <div className="text-green-600 font-semibold mt-2">Bedankt voor je aanvraag! We nemen zo snel mogelijk contact op.</div>}
+              {error && <div className="text-red-600 font-semibold mt-2">{error}</div>}
             </div>
           </form>
         </div>
@@ -230,6 +282,4 @@ const DemoRequestPage = () => {
       <Footer />
     </div>
   );
-};
-
-export default DemoRequestPage; 
+}; 

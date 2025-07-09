@@ -1,58 +1,10 @@
 import React from 'react';
 import SmartBuildingCta from '@/components/SmartBuildingCta';
-import CaseStudiesGallery, { CaseStudy } from '@/components/CaseStudiesGallery';
+import CaseStudiesGallery from '@/components/CaseStudiesGallery';
+import { caseStudiesData } from '../../caseStudiesData';
 import Footer from '@/components/Footer';
 
-const caseStudies: CaseStudy[] = [
-  {
-    id: 'zorginstelling-amsterdam',
-    title: 'Zorginstelling Amsterdam',
-    description: 'Een grote zorginstelling in Amsterdam die met ons platform het binnenklimaat optimaliseerde voor patiënten en personeel, terwijl de energiekosten daalden.',
-    results: [
-      '28% lagere energiekosten',
-      'Verbeterde luchtkwaliteit (CO2 reductie van 45%)',
-      'Minder ziekteverzuim onder personeel',
-      'Automatische ventilatie optimalisatie'
-    ],
-    image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2053&q=80'
-  },
-  {
-    id: 'onderwijsgebouw-utrecht',
-    title: 'Onderwijsgebouw Utrecht',
-    description: 'Een onderwijsgebouw in Utrecht dat met onze oplossing het energieverbruik optimaliseerde en het comfort voor studenten en docenten verbeterde.',
-    results: [
-      '42% energiebesparing',
-      'Optimaal binnenklimaat in alle ruimtes',
-      'Voorspellend onderhoud leidde tot 60% minder storingen',
-      'Real-time monitoring van alle installaties'
-    ],
-    image: 'https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2064&q=80'
-  },
-  {
-    id: 'hotel-den-haag',
-    title: 'Hotel Den Haag',
-    description: 'Een groot hotel in Den Haag dat met Infinity\'s platform het energieverbruik per kamer inzichtelijk maakte en het comfort voor gasten optimaliseerde.',
-    results: [
-      '30% minder energieverbruik per kamer',
-      'Gasttevredenheid steeg naar 9.1',
-      'Realtime storingsmeldingen voor technische dienst',
-      'Snellere responstijd bij klachten'
-    ],
-    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 'gemeentehuis-groningen',
-    title: 'Gemeentehuis Groningen',
-    description: 'Het gemeentehuis van Groningen realiseerde met Infinity een duurzame renovatie en een volledig geautomatiseerd binnenklimaat.',
-    results: [
-      '50% minder energieverbruik na renovatie',
-      'Volledig geautomatiseerde klimaatregeling',
-      'Duurzaamheidslabel A behaald',
-      'Tevredenheid medewerkers +30%'
-    ],
-    image: 'https://images.unsplash.com/photo-1464983953574-0892a716854b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  }
-];
+const caseStudies = caseStudiesData;
 
 const ServicesPage = () => {
   const [currentSlide, setCurrentSlide] = React.useState(0);

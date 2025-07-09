@@ -3,7 +3,9 @@ import React, { useState } from 'react';
 import { Building2, Users, Target, Award, TrendingUp, Shield, Heart, Linkedin, Youtube, Phone, Mail, MapPin, ArrowLeft, ChevronRight, Clock, Globe, Lightbulb, Zap } from 'lucide-react';
 import { RouterLink } from '@/components/Router';
 import Header from '@/components/Header';
+import SmartBuildingCta from '@/components/SmartBuildingCta';
 import Footer from '@/components/Footer';
+import ContactSection from '@/components/ContactSection';
 
 const BedrijfPage = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -85,24 +87,29 @@ const BedrijfPage = () => {
 
   const milestones = [
     {
-      year: "2010",
+      year: "2014",
       title: "Start Infinity",
-      description: "Oprichting van Infinity met focus op gebouwoptimalisatie"
+      description: "Oprichting van Infinity met focus op gebouwoptimalisatie middels het SkySpark platform"
     },
     {
-      year: "2015",
-      title: "Eerste AI Implementatie",
+      year: "2018",
+      title: "Eerste voorspellende aansturinging",
       description: "Introductie van machine learning in gebouwbeheer"
     },
     {
-      year: "2020",
-      title: "Smart Building Platform",
-      description: "Lancering van ons geïntegreerde platform"
+      year: "2021",
+      title: "Meer dan 100 gebouwen aangesloten",
+      description: "Met een bewezen track record van 25% gemiddeld energiebesparing"
+    },
+    {
+      year: "2023",
+      title: "Eerste netcogestie project",
+      description: "Voorspellende aansturing accu, laadpalen, omvormers en warmtepompen"
     },
     {
       year: "2025",
-      title: "Marktleider",
-      description: "Erkend als innovatieve leider in slimme gebouwen"
+      title: "Doorzet groei in monitoring als aansturing",
+      description: "Erkend in de markt als innovatieve kennispartner"
     }
   ];
 
@@ -119,7 +126,7 @@ const BedrijfPage = () => {
               Home
             </RouterLink>
             <ChevronRight className="h-4 w-4 text-gray-400" />
-            <span className="text-emerald-600 font-semibold">Bedrijf</span>
+            <span className="text-[#00e886] font-semibold">Bedrijf</span>
           </div>
         </div>
       </div>
@@ -128,8 +135,8 @@ const BedrijfPage = () => {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Over <span className="bg-gradient-to-r from-emerald-400 via-green-400 to-teal-400 bg-clip-text text-transparent">Infinity</span>
+            <h1 className="text-4xl lg:text-5xl font-bold text-black mb-6">
+              Over <span className="text-[#00e886]">Infinity</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Door de complexiteit van gebouwinstallaties en data-analyse combineren we twee disciplines 
@@ -157,22 +164,22 @@ const BedrijfPage = () => {
                 voor alle gebruikers.
               </p>
             </div>
-            <div className="bg-emerald-50 p-8 rounded-2xl">
+            <div className="bg-white p-8 rounded-2xl shadow-2xl">
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-emerald-600 mb-2">15+</div>
-                  <div className="text-gray-600">Jaar Ervaring</div>
+                  <div className="text-3xl font-bold mb-2" style={{ color: '#00e886' }}>10+</div>
+                  <div className="text-gray-600">Jaar ervaring</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-emerald-600 mb-2">500+</div>
-                  <div className="text-gray-600">Gebouwen Gemonitord</div>
+                  <div className="text-3xl font-bold mb-2" style={{ color: '#00e886' }}>100+</div>
+                  <div className="text-gray-600">Gebouwen gemonitord</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-emerald-600 mb-2">30%</div>
-                  <div className="text-gray-600">Gem. Energiebesparing</div>
+                  <div className="text-3xl font-bold mb-2" style={{ color: '#00e886' }}>25%</div>
+                  <div className="text-gray-600">Gem. energiebesparing</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-emerald-600 mb-2">24/7</div>
+                  <div className="text-3xl font-bold mb-2" style={{ color: '#00e886' }}>24/7</div>
                   <div className="text-gray-600">Monitoring</div>
                 </div>
               </div>
@@ -193,12 +200,12 @@ const BedrijfPage = () => {
             {values.map((value, index) => {
               const IconComponent = value.icon;
               return (
-                <div key={index} className="text-center group">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-emerald-100 flex items-center justify-center group-hover:bg-emerald-200 transition-colors">
-                    <IconComponent className="h-8 w-8 text-emerald-600" />
+                <div key={index} className="text-center group bg-black rounded-2xl p-8 shadow-lg">
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-[#00e886] flex items-center justify-center transition-colors">
+                    <IconComponent className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
-                  <p className="text-gray-600">{value.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
+                  <p className="text-white/80">{value.description}</p>
                 </div>
               );
             })}
@@ -210,7 +217,7 @@ const BedrijfPage = () => {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Ons Team</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Ons team</h2>
             <p className="text-xl text-gray-600">De experts achter Infinity</p>
           </div>
 
@@ -250,8 +257,8 @@ const BedrijfPage = () => {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Onze Reis</h2>
-            <p className="text-xl text-gray-600">Van startup tot marktleider</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Onze reis</h2>
+            <p className="text-xl text-gray-600">Van innovatieve startup naar 100+ gebouwen</p>
           </div>
 
           <div className="relative">
@@ -267,7 +274,7 @@ const BedrijfPage = () => {
                   {/* Content */}
                   <div className={`w-5/12 ${index % 2 === 0 ? 'pr-12 text-right' : 'pl-12 text-left'}`}>
                     <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
-                      <div className="text-emerald-600 font-bold text-lg mb-2">{milestone.year}</div>
+                      <div className="font-bold text-lg mb-2" style={{ color: '#00e886' }}>{milestone.year}</div>
                       <h3 className="text-xl font-bold text-gray-900 mb-2">{milestone.title}</h3>
                       <p className="text-gray-600">{milestone.description}</p>
                     </div>
@@ -280,7 +287,7 @@ const BedrijfPage = () => {
       </section>
 
       {/* Unique Approach Section */}
-      <section className="py-16 bg-emerald-50">
+      <section className="py-16 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Wat ons uniek maakt</h2>
@@ -289,8 +296,8 @@ const BedrijfPage = () => {
 
           <div className="grid lg:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-emerald-100 flex items-center justify-center">
-                <Building2 className="h-8 w-8 text-emerald-600" />
+              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-black flex items-center justify-center">
+                <Building2 className="h-8 w-8 text-[#00e886]" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Installatietechniek</h3>
               <p className="text-gray-600">
@@ -300,8 +307,8 @@ const BedrijfPage = () => {
             </div>
 
             <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-emerald-100 flex items-center justify-center">
-                <Globe className="h-8 w-8 text-emerald-600" />
+              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-black flex items-center justify-center">
+                <Globe className="h-8 w-8 text-[#00e886]" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Data & Analytics</h3>
               <p className="text-gray-600">
@@ -311,8 +318,8 @@ const BedrijfPage = () => {
             </div>
 
             <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-emerald-100 flex items-center justify-center">
-                <Zap className="h-8 w-8 text-emerald-600" />
+              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-black flex items-center justify-center">
+                <Zap className="h-8 w-8 text-[#00e886]" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Integratie</h3>
               <p className="text-gray-600">
@@ -324,24 +331,8 @@ const BedrijfPage = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-emerald-600 to-teal-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">Wilt u samenwerken met Infinity?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Ontdek hoe onze expertise in installatietechniek en data-analyse uw gebouw kan transformeren.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-emerald-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors">
-              Neem Contact Op
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors">
-              Bekijk Onze Cases
-            </button>
-          </div>
-        </div>
-      </section>
-
+      <SmartBuildingCta />
+      <ContactSection />
       <Footer />
     </div>
   );

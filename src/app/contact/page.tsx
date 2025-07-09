@@ -41,7 +41,7 @@ const ContactPage = () => {
               Home
             </RouterLink>
             <ChevronRight className="h-4 w-4 text-gray-400" />
-            <span className="text-emerald-600 font-semibold">Contact</span>
+            <span className="text-[#00e886] font-semibold">Contact</span>
           </div>
         </div>
       </div>

@@ -24,3 +24,16 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Logo-groen utility classes */
+.text-logo-green { color: #00e886; }
+.hover\:text-logo-green-hover:hover { color: #00c46c; }
+.bg-logo-green { background-color: #00e886; }
+
+@keyframes company-logos-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-company-logos {
+  animation: company-logos-scroll 30s linear infinite;
+}

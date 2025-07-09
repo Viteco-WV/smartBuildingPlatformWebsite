@@ -2,13 +2,13 @@ import React from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { RouterLink } from '@/components/Router';
 
-export interface CaseStudy {
+export type CaseStudy = {
   id: string;
   title: string;
   description: string;
   results: string[];
   image: string;
-}
+};
 
 interface CaseStudiesGalleryProps {
   caseStudies: CaseStudy[];
@@ -46,13 +46,13 @@ const CaseStudiesGallery: React.FC<CaseStudiesGalleryProps> = ({ caseStudies, cu
                     </div>
                     <div className="space-y-4">
                       <div className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-emerald-500 rounded-full" />
+                        
                         <span className="text-gray-900 font-semibold">Resultaten:</span>
                       </div>
                       <ul className="space-y-2">
                         {study.results.map((result, i) => (
                           <li key={i} className="flex items-start space-x-2">
-                            <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full mt-2" />
+                            <div className="w-1.5 h-1.5 rounded-full mt-2 bg-black" />
                             <span className="text-gray-600">{result}</span>
                           </li>
                         ))}
@@ -60,7 +60,7 @@ const CaseStudiesGallery: React.FC<CaseStudiesGalleryProps> = ({ caseStudies, cu
                     </div>
                     <RouterLink
                       href={`/cases/${study.id}`}
-                      className="inline-flex items-center text-emerald-600 font-semibold hover:text-emerald-700 transition-colors"
+                      className="inline-flex items-center font-semibold transition-colors text-logo-green hover:text-logo-green-hover"
                     >
                       Lees het volledige verhaal
                       <ChevronRight className="h-4 w-4 ml-1" />
@@ -91,7 +91,7 @@ const CaseStudiesGallery: React.FC<CaseStudiesGalleryProps> = ({ caseStudies, cu
               key={index}
               onClick={() => setCurrentSlide(index)}
               className={`w-2.5 h-2.5 rounded-full transition-colors ${
-                currentSlide === index ? 'bg-emerald-600' : 'bg-gray-300 hover:bg-gray-400'
+                currentSlide === index ? 'bg-logo-green' : 'bg-gray-300 hover:bg-gray-400'
               }`}
               aria-label={`Ga naar slide ${index + 1}`}
             />
