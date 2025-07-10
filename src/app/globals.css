@@ -37,3 +37,9 @@ body {
 .animate-company-logos {
   animation: company-logos-scroll 30s linear infinite;
 }
+
+@media (max-width: 640px) {
+  .animate-company-logos {
+    animation-duration: 12s !important;
+  }
+}

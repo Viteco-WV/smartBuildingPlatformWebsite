@@ -27,11 +27,19 @@ const CaseStudiesGallery: React.FC<CaseStudiesGalleryProps> = ({ caseStudies, cu
       </div>
       <div className="relative">
         <div className="overflow-hidden">
-          <div className="flex gap-6 transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+          <div
+            className="flex transition-transform duration-500 ease-in-out"
+            style={{
+              transform: `translateX(-${currentSlide * 100}%)`,
+            }}
+          >
             {caseStudies.map((study, index) => (
-              <div key={index} className="min-w-full flex-shrink-0">
-                <div className="flex flex-col md:flex-row gap-8 items-center">
-                  <div className="relative w-full md:w-[420px] h-[320px] rounded-2xl overflow-hidden flex-shrink-0">
+              <div
+                key={index}
+                className="min-w-full flex-shrink-0 flex flex-col items-center md:block px-4 box-border"
+              >
+                <div className="flex flex-col w-full md:flex-row gap-8 items-center md:items-start">
+                  <div className="relative w-full max-w-xs h-[180px] md:w-[420px] md:h-[320px] rounded-2xl overflow-hidden flex-shrink-0 mb-6 md:mb-0 mx-auto">
                     <img
                       src={study.image}
                       alt={study.title}
@@ -39,14 +47,13 @@ const CaseStudiesGallery: React.FC<CaseStudiesGalleryProps> = ({ caseStudies, cu
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
                   </div>
-                  <div className="flex-1 space-y-6 w-full max-w-xl break-words">
+                  <div className="flex-1 space-y-6 w-full max-w-xs md:max-w-xl break-words mx-auto">
                     <div>
                       <h3 className="text-2xl font-bold text-gray-900 mb-2">{study.title}</h3>
                       <p className="text-gray-600">{study.description}</p>
                     </div>
                     <div className="space-y-4">
                       <div className="flex items-center space-x-2">
-                        
                         <span className="text-gray-900 font-semibold">Resultaten:</span>
                       </div>
                       <ul className="space-y-2">

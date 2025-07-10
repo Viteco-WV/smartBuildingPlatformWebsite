@@ -24,6 +24,10 @@ const vacatures = [
   },
 ];
 
+export const metadata = {
+  title: 'Infinity',
+};
+
 export default function CarrierePage() {
   return (
     <div className="min-h-screen bg-white flex flex-col">
@@ -32,7 +36,7 @@ export default function CarrierePage() {
       <div className="bg-gray-50 py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center space-x-2 text-sm">
-            <Link href="/" className="text-gray-600 hover:text-emerald-600 transition-colors flex items-center">
+            <Link href="/" className="text-black hover:text-emerald-600 transition-colors flex items-center">
               {/* Use lucide-react ArrowLeft icon */}
               <svg className="h-4 w-4 mr-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7"></path></svg>
               Home
@@ -44,8 +48,8 @@ export default function CarrierePage() {
         </div>
       </div>
       <main className="flex-1 max-w-7xl mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-8 text-center">Werken bij Infinity</h1>
-        <p className="text-xl text-gray-600 mb-12 text-center">Wil jij bijdragen aan slimme, duurzame gebouwen? Bekijk onze vacatures en solliciteer direct!</p>
+        <h1 className="text-4xl font-bold mb-8 text-center text-black">Werken bij Infinity</h1>
+        <p className="text-xl text-black mb-12 text-center">Wil jij bijdragen aan slimme, duurzame gebouwen? Bekijk onze vacatures en solliciteer direct!</p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {vacatures.map((v, i) => {
             const Icon = v.icon;

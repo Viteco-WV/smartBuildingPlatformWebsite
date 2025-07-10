@@ -4,7 +4,7 @@ export const caseStudiesData: CaseStudy[] = [
   {
     id: 'atrium-amsterdam',
     title: 'Atrium Zuidas',
-    description: 'Modern kantoorgebouw in Amsterdam dat met behulp van onze services een van 25% realiseerde op HVAC gerelateerd energievebruik.',
+    description: 'Modern kantoorgebouw in Amsterdam dat met behulp van onze dienstverlening 25% besparing realiseerde op HVAC gerelateerd energievebruik.',
     results: [
       '25% energiebesparing op jaarbasis',
       'Onderhoudproces datagedreven gemaakt',
@@ -16,7 +16,7 @@ export const caseStudiesData: CaseStudy[] = [
   {
     id: 'roc-mondriaan',
     title: 'ROC Mondriaan',
-    description: 'Een grote zorginstelling in Amsterdam die met ons platform het binnenklimaat optimaliseerde voor patiënten en personeel, terwijl de energiekosten daalden.',
+    description: 'Voor 20+ gebouwen ondersteund Infnity het facility management team in het dagelijks beheer van de energie & HVAC installaties vanuit monitoring',
     results: [
       'Lagere energiekosten',
       'Verbeterde luchtkwaliteit',

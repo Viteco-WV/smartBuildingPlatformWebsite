@@ -55,7 +55,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <div className="font-semibold text-gray-900">Telefoon</div>
-                  <div className="text-gray-600">+31 (0)85 303 3054</div>
+                  <div className="text-gray-600">085 210 4456</div>
                 </div>
               </div>
               <div className="flex items-center space-x-4">
@@ -64,7 +64,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <div className="font-semibold text-gray-900">Email</div>
-                  <div className="text-gray-600">info@infinity-analysis.com</div>
+                  <div className="text-gray-600">info@infinity-monitoring.com</div>
                 </div>
               </div>
               <div className="flex items-center space-x-4">
@@ -73,7 +73,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <div className="font-semibold text-gray-900">Locatie</div>
-                  <div className="text-gray-600">Nederland</div>
+                  <div className="text-gray-600"><a href="https://maps.app.goo.gl/1zSjk2WhKqnXqRN5A" target="_blank" rel="noopener noreferrer">Wijkermeerweg 44U, Beverwijk</a></div>
                 </div>
               </div>
             </div>

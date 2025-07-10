@@ -98,15 +98,15 @@ const SmartBuildingHomepage = () => {
           <div className="flex flex-col lg:flex-row items-center gap-12">
             {/* Tekst links */}
             <div className="flex-1">
-              <h1 className="text-3xl lg:text-5xl font-bold mb-8 leading-tight text-left">
+              <h1 className="text-3xl lg:text-5xl font-bold mb-8 leading-tight text-left text-black">
                 Slimme gebouwen op het gebied van <span className="text-[#00e886]">energie-efficiëntie</span> <span className="text-black">en</span> <span className="text-[#00e886]">comfort</span>
               </h1>
               <p className="text-lg text-gray-900 mb-8">
                 Wij maken energie en HVAC-installaties intelligent middels geautomatiseerde fout detectie en diagnose in combinatie met voorspellend aansturen. Vanuit diepgaande kennis in meet- & regeltechniek, energie en HVAC ondersteunen wij onze klanten data gedreven in het dagelijks beheer van hun assets.
               </p>
-              <div className="flex gap-4">
-                <RouterLink href="/demo" className="bg-[#00e886] text-white px-6 py-3 rounded font-semibold shadow transition hover:bg-[#00d676] hover:shadow-[0_4px_16px_0_#00e88644] flex items-center justify-center">Boek je demo</RouterLink>
-                <RouterLink href="/services" className="bg-gray-200 text-gray-900 px-6 py-3 rounded font-semibold transition hover:bg-gray-300 hover:shadow-[0_4px_16px_0_#00e88644]">Onze service</RouterLink>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center sm:justify-start items-center sm:items-start w-full">
+                <RouterLink href="/demo" className="bg-[#00e886] text-white px-6 py-3 rounded font-semibold shadow transition hover:bg-[#00d676] hover:shadow-[0_4px_16px_0_#00e88644] flex items-center justify-center w-full max-w-xs sm:w-auto sm:max-w-none">Boek je demo</RouterLink>
+                <RouterLink href="/services" className="bg-gray-200 text-gray-900 px-6 py-3 rounded font-semibold transition hover:bg-gray-300 hover:shadow-[0_4px_16px_0_#00e88644] w-full max-w-xs sm:w-auto sm:max-w-none text-center">Onze service</RouterLink>
               </div>
             </div>
             {/* Grijs vlak rechts */}
@@ -127,7 +127,7 @@ const SmartBuildingHomepage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Vier krachtige modules</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Het platform bestaat uit geïntegreerde modules die samen zorgen voor compleet inzicht en controle over uw gebouwprestaties. Hiermee bent u direct GACS complaint.
+              Het platform bestaat uit geïntegreerde modules die samen zorgen voor compleet inzicht en controle over uw gebouwprestaties. Hiermee bent u direct GACS compliant.
             </p>
           </div>
 
@@ -169,6 +169,7 @@ const SmartBuildingHomepage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-8 text-center">
             <h2 className="text-4xl font-bold text-black mt-2 mb-4">We werken voor je gebouw en voor de mensen die erin zitten</h2>
+            <div className="w-16 h-1 bg-[#00e886] rounded-full mx-auto mb-6"></div>
             <p className="text-gray-600 max-w-4xl mb-10 mx-auto">
               Er zijn veel argumenten om de prestaties van het gebouw inzichtelijk te maken: duurzaam beheer; het voorspelbaar maken van onderhoud; de wens van overheden om Europa klimaatvriendelijker te maken. Al die motieven onderschrijven we. Maar onder de streep werken we voor jou en voor de gebruikers van jouw gebouw.
             </p>
@@ -180,16 +181,19 @@ const SmartBuildingHomepage = () => {
               />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div>
-                <h3 className="font-bold text-xl mb-2">Blije gebruikers</h3>
+              <div className="bg-gray-50 rounded-2xl p-8 shadow-lg flex flex-col items-center text-center">
+                <h3 className="font-bold text-xl mb-2 text-black">Blije gebruikers</h3>
+                <div className="w-12 h-1 bg-[#00e886] rounded-full mb-4"></div>
                 <p className="text-gray-700">Een gezond binnenklimaat zorgt voor gezonde en productieve gebruikers. We streven naar een vermindering van het ziekteverzuim als gevolg van gebrekkig functionerende installaties. In een gezond gebouw werken blije mensen!</p>
               </div>
-              <div>
-                <h3 className="font-bold text-xl mb-2">Minder kosten</h3>
+              <div className="bg-gray-50 rounded-2xl p-8 shadow-lg flex flex-col items-center text-center">
+                <h3 className="font-bold text-xl mb-2 text-black">Minder kosten</h3>
+                <div className="w-12 h-1 bg-[#00e886] rounded-full mb-4"></div>
                 <p className="text-gray-700">Als alle onderdelen in een installatie goed hun werk doen, kan dit zorgen voor een substantiële kostenreductie op energieverbruik en onderhoud. En natuurlijk heeft een goed werkende installatie een langere levensduur.</p>
               </div>
-              <div>
-                <h3 className="font-bold text-xl mb-2">Echte verbeteringen</h3>
+              <div className="bg-gray-50 rounded-2xl p-8 shadow-lg flex flex-col items-center text-center">
+                <h3 className="font-bold text-xl mb-2 text-black">Echte verbeteringen</h3>
+                <div className="w-12 h-1 bg-[#00e886] rounded-full mb-4"></div>
                 <p className="text-gray-700">We controleren alle ruimtes in een gebouw; van de lucht- en watertemperatuur, klepstanden en ventilatiepunten tot het gedrag van de gebruikers. Dat leidt tot inzichten die zorgen voor echte verbetering.</p>
               </div>
             </div>
@@ -199,7 +203,7 @@ const SmartBuildingHomepage = () => {
 
       {/* Waarom kiezen voor Infinity? */}
       <section id="voordelen" className="py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 pb-10 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Waarom kiezen voor Infinity?</h2>
             <p className="text-xl text-gray-600">Meetbare voordelen voor uw gebouw en organisatie</p>
@@ -218,8 +222,8 @@ const SmartBuildingHomepage = () => {
               );
             })}
           </div>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h3 className="text-2xl font-bold text-center mb-6">Bedrijven die vertrouwen op Infinity</h3>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8"> {/* mb-4 toegevoegd, was geen margin-bottom */}
+            <h3 className="text-center font-bold text-2xl pt-8 text-gray-600 mb-4">Bedrijven die vertrouwen op Infinity</h3>
             <div className="relative overflow-hidden">
               <div className="flex gap-12 items-center py-4 animate-company-logos whitespace-nowrap" style={{ animation: 'company-logos-scroll 30s linear infinite' }}>
                 {logoFiles.map((file, idx) => (
@@ -229,13 +233,9 @@ const SmartBuildingHomepage = () => {
           </div>
         </div>
         </div>
-      </section>
-      
-      {/* Logo slider & klantreacties */}
-      <section className="py-16 bg-gray-50 border-b border-gray-100 ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div>
-            <h3 className="text-2xl font-bold text-center mb-8 italic">Wat zeggen onze klanten?</h3>
+            <h3 className="text-center font-bold text-2xl pt-8 text-gray-600 mb-8">Wat zeggen onze klanten?</h3>
             <div className="grid md:grid-cols-3 gap-8">
               {/* Dummy klantreacties */}
               <div className="bg-white rounded-2xl p-8 shadow-lg flex flex-col items-center text-center">
@@ -266,6 +266,7 @@ const SmartBuildingHomepage = () => {
           </div>
         </div>
       </section>
+      
 
       <SmartBuildingCta />
       <CaseStudiesGallery caseStudies={caseStudies} currentSlide={currentSlide} setCurrentSlide={setCurrentSlide} />

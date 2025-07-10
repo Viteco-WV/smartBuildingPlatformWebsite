@@ -11,6 +11,7 @@ import { caseStudiesData } from '../../caseStudiesData';
 import { useSearchParams } from 'next/navigation';
 import CaseStudiesSectionHeader from '@/components/CaseStudiesSectionHeader';
 import { Suspense } from 'react';
+import ContactSection from '@/components/ContactSection';
 
 const PlatformPage = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -138,11 +139,11 @@ const PlatformPage = () => {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h1 className="text-3xl md:text-4xl font-bold text-black mb-4">
               Software voor het eenvoudig <span className="text-logo-green">managen</span> van<br />
               jouw <span className="text-logo-green">gebouw prestaties</span>
             </h1>
-            <p className="text-base md:text-lg text-gray-700 max-w-4xl mx-auto">
+            <p className="text-base md:text-lg text-black max-w-4xl mx-auto">
               Het SkySpark platform van Infinity is gericht op het geven van transparantie en controle door eenvoud. Simpele dashboards en rapportages geven je het benodigde inzicht om in control te zijn. Geautomatiseerde analyses houden prestaties in de gaten en maken jou - indien nodig - hier op alert.
             </p>
           </div>
@@ -152,8 +153,8 @@ const PlatformPage = () => {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-4">4 praktische modules</h2>
-            <p className="text-center text-gray-600 mb-12">
+            <h2 className="text-3xl font-bold text-black text-center mb-4">4 praktische modules</h2>
+            <p className="text-center text-black mb-12">
               Onze standaard modules zijn ontworpen om de efficiëntie te maximaliseren en voldoen aan de meeste gebruikerswensen. Heeft u specifieke wensen? Wij kunnen modules aanpassen op het gebied van dashboards, rapportages en analyses zodat het platform perfect aansluit op uw organisatie.
             </p>
           </div>
@@ -192,25 +193,25 @@ const PlatformPage = () => {
             <div className="p-8 lg:p-12">
               <div className="grid lg:grid-cols-2 gap-12">
                 <div>
-                  <h4 className="text-2xl font-bold text-gray-900 mb-6">Belangrijkste Features</h4>
+                  <h4 className="text-2xl font-bold text-black mb-6">Belangrijkste Features</h4>
                   <ul className="space-y-4">
                     {currentModule.features.map((feature, index) => (
                       <li key={index} className="flex items-start space-x-3">
                         <div className="flex-shrink-0 w-6 h-6 bg-[#e6fcf4] rounded-full flex items-center justify-center mt-0.5">
                           <div className="w-2 h-2 bg-[#00e886] rounded-full"></div>
                         </div>
-                        <span className="text-gray-600">{feature}</span>
+                        <span className="text-black">{feature}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
                 <div>
-                  <h4 className="text-2xl font-bold text-gray-900 mb-6">Voordelen</h4>
+                  <h4 className="text-2xl font-bold text-black mb-6">Voordelen</h4>
                   <div className="space-y-4">
                     {currentModule.benefits.map((benefit, index) => (
                       <div key={index} className="flex items-center space-x-3 p-4 bg-gray-50 rounded-lg">
                         <TrendingUp className="h-6 w-6 text-[#00e886]" />
-                        <span className="font-semibold text-gray-900">{benefit}</span>
+                        <span className="font-semibold text-black">{benefit}</span>
                       </div>
                     ))}
                   </div>
@@ -227,7 +228,7 @@ const PlatformPage = () => {
           <p className="text-lg text-black mb-2">
             Ons platform maakt gebruik van <strong>SkySpark&reg;</strong> van SkyFoundry als onderliggende software. SkySpark is wereldwijd toonaangevend op het gebied van data-analyse en gebouwbeheer. Dankzij deze technologie kunnen wij geavanceerde analyses, foutdetectie en optimalisatie van gebouwprestaties bieden.
           </p>
-          <p className="text-black">
+          <p className="text-lg text-black">
             Door de kracht van SkySpark te combineren met onze eigen expertise, bieden wij een flexibel, schaalbaar en toekomstbestendig smart building platform voor elk type gebouw.
           </p>
         </div>
@@ -237,8 +238,8 @@ const PlatformPage = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#00e886] mb-2">Implementatie</h2>
-            <h3 className="text-4xl font-bold text-gray-900 mb-4">In vijf stappen naar een slim gebouw</h3>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <h3 className="text-4xl font-bold text-black mb-4">In vijf stappen naar een slim gebouw</h3>
+            <p className="text-lg text-black max-w-3xl mx-auto">
               We helpen eindgebruikers, installateurs, regeltechnische partijen en adviseurs bij het creëren van slimme gebouwen met een gezond binnenklimaat en substantiële kostenreductie op energieverbruik en onderhoud.
             </p>
           </div>
@@ -252,7 +253,7 @@ const PlatformPage = () => {
                 <div className="flex w-full items-center">
                   <div className="bg-white rounded-lg shadow p-4 w-2/3 max-w-md transition-all duration-200 group-hover:bg-[#e6fcf4] group-hover:shadow-lg">
                     <h4 className="text-black text-lg font-bold mb-1">Dataverzameling</h4>
-                    <p className="text-gray-700 text-sm">Ieder gebouw produceert data. Die verzamelen we. Of het nu gaat om de directe data van de installatie, een slimme meter, historische data of data uit externe applicaties: onze software accepteert alle vormen van data. Die data brengen we bij elkaar.</p>
+                    <p className="text-black text-sm">Ieder gebouw produceert data. Die verzamelen we. Of het nu gaat om de directe data van de installatie, een slimme meter, historische data of data uit externe applicaties: onze software accepteert alle vormen van data. Die data brengen we bij elkaar.</p>
                   </div>
                   <div className="w-1/3 flex justify-center items-center pl-4">
                     <div className="w-24 h-24 rounded-full bg-black flex items-center justify-center">
@@ -267,7 +268,7 @@ const PlatformPage = () => {
                 <div className="flex w-full items-center">
                   <div className="bg-white rounded-lg shadow p-4 w-2/3 max-w-md transition-all duration-200 group-hover:bg-[#e6fcf4] group-hover:shadow-lg">
                     <h4 className="text-black text-lg font-bold mb-1">Data-labelling</h4>
-                    <p className="text-gray-700 text-sm">Om de eendimensionale ruwe data uit verschillende bronnen betekenis te geven committeren wij ons aan de <a href="https://project-haystack.org/" target="_blank" className="text-[#00e886] underline">Project Haystack</a> Conventie, waardoor we eenduidig de data labelen. Alle data die afkomstig is van componenten, software en applicaties wordt gerangschikt en gecategoriseerd. Meetgegevens krijgen hierdoor betekenis.</p>
+                    <p className="text-black text-sm">Om de eendimensionale ruwe data uit verschillende bronnen betekenis te geven committeren wij ons aan de <a href="https://project-haystack.org/" target="_blank" className="text-[#00e886] underline">Project Haystack</a> Conventie, waardoor we eenduidig de data labelen. Alle data die afkomstig is van componenten, software en applicaties wordt gerangschikt en gecategoriseerd. Meetgegevens krijgen hierdoor betekenis.</p>
                   </div>
                   <div className="w-1/3 flex justify-center items-center pl-4">
                     <div className="w-24 h-24 rounded-full bg-black flex items-center justify-center">
@@ -282,7 +283,7 @@ const PlatformPage = () => {
                 <div className="flex w-full items-center">
                   <div className="bg-white rounded-lg shadow p-4 w-2/3 max-w-md transition-all duration-200 group-hover:bg-[#e6fcf4] group-hover:shadow-lg">
                     <h4 className="text-black text-lg font-bold mb-1">Monitoring en data-analyse</h4>
-                    <p className="text-gray-700 text-sm">Als de data gelabeld is, weten we om wat voor data het gaat en kunnen we het geheel inzichtelijk maken. We doen dit met <a href="https://skyfoundry.com/skyspark/" target="_blank" className="text-[#00e886] underline">SkySpark</a>, een monitoring- en analytics-tool die het mogelijk maakt om de installatie zelfstandig te analyseren, maar ook geautomatiseerd voor je op zoek gaat naar correlaties, afwijkingen en verbeterpunten.</p>
+                    <p className="text-black text-sm">Als de data gelabeld is, weten we om wat voor data het gaat en kunnen we het geheel inzichtelijk maken. We doen dit met <a href="https://skyfoundry.com/skyspark/" target="_blank" className="text-[#00e886] underline">SkySpark</a>, een monitoring- en analytics-tool die het mogelijk maakt om de installatie zelfstandig te analyseren, maar ook geautomatiseerd voor je op zoek gaat naar correlaties, afwijkingen en verbeterpunten.</p>
                   </div>
                   <div className="w-1/3 flex justify-center items-center pl-4">
                     <div className="w-24 h-24 rounded-full bg-black flex items-center justify-center">
@@ -297,7 +298,7 @@ const PlatformPage = () => {
                 <div className="flex w-full items-center">
                   <div className="bg-white rounded-lg shadow p-4 w-2/3 max-w-md transition-all duration-200 group-hover:bg-[#e6fcf4] group-hover:shadow-lg">
                     <h4 className="text-black text-lg font-bold mb-1">Toegankelijke dashboards</h4>
-                    <p className="text-gray-700 text-sm">Naast monitoring en analyse met behulp van SkySpark, kunnen de resultaten van de eerste drie stappen ook bij elkaar worden gebracht in gebruiksvriendelijke en overzichtelijke dashboards en rapportagetools. Deze dashboards geven beheerders en onderhoudspartijen inzicht in de meest relevante informatie over de werking van de gebouwinstallaties.</p>
+                    <p className="text-black text-sm">Naast monitoring en analyse met behulp van SkySpark, kunnen de resultaten van de eerste drie stappen ook bij elkaar worden gebracht in gebruiksvriendelijke en overzichtelijke dashboards en rapportagetools. Deze dashboards geven beheerders en onderhoudspartijen inzicht in de meest relevante informatie over de werking van de gebouwinstallaties.</p>
                   </div>
                   <div className="w-1/3 flex justify-center items-center pl-4">
                     <div className="w-24 h-24 rounded-full bg-black flex items-center justify-center">
@@ -312,7 +313,7 @@ const PlatformPage = () => {
                 <div className="flex w-full items-center">
                   <div className="bg-white rounded-lg shadow p-4 w-2/3 max-w-md transition-all duration-200 group-hover:bg-[#e6fcf4] group-hover:shadow-lg">
                     <h4 className="text-black text-lg font-bold mb-1">Slim gebouwmanagement</h4>
-                    <p className="text-gray-700 text-sm">Naast het monitoren, analyseren en handmatig optimaliseren van jouw gebouwinstallatie is het systeem ook zelfstandig in staat om data terug te sturen naar de installatie. Hierdoor kunnen ingestelde instellingen worden aangepast aan de gewenste waarden. En dan is jouw slimme gebouw een feit.</p>
+                    <p className="text-black text-sm">Naast het monitoren, analyseren en handmatig optimaliseren van jouw gebouwinstallatie is het systeem ook zelfstandig in staat om data terug te sturen naar de installatie. Hierdoor kunnen ingestelde instellingen worden aangepast aan de gewenste waarden. En dan is jouw slimme gebouw een feit.</p>
                   </div>
                   <div className="w-1/3 flex justify-center items-center pl-4">
                     <div className="w-24 h-24 rounded-full bg-black flex items-center justify-center">
@@ -327,6 +328,7 @@ const PlatformPage = () => {
       </section>
       <SmartBuildingCta />
       <CaseStudiesGallery caseStudies={caseStudies} currentSlide={currentSlide} setCurrentSlide={setCurrentSlide} />
+      <ContactSection />
       <Footer />
     </div>
   );

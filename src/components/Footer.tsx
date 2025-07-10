@@ -41,10 +41,10 @@ const Footer = () => (
           <div>
             <h4 className="font-semibold mb-4">Contact</h4>
             <div className="space-y-2 text-sm text-gray-500 mb-4">
-              <div>+31 (0)85 303 3054</div>
-              <div>info@infinity-analysis.com</div>
-              <div>Wijkermeerweg 44U, Beverwijk</div>
               <div><a href="https://linkedin.com/company/infinity-monitoring" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
+              <div>085 210 4456</div>
+              <div>info@infinity-monitoring.com</div>
+              <div><a href="https://maps.app.goo.gl/1zSjk2WhKqnXqRN5A" target="_blank" rel="noopener noreferrer">Wijkermeerweg 44U, Beverwijk</a></div>
             </div>
           </div>
         </div>

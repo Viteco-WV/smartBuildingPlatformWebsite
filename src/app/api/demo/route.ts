@@ -1,14 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
+import { emailConfig } from '../../../emailConfig';
 
 export async function POST(req: NextRequest) {
   const { firstName, lastName, email, phone, comments, preferences } = await req.json();
 
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    service: emailConfig.smtp.service,
     auth: {
-      user: 'werner.vink@viteco.tech',
-      pass: 'cnvedeceixffjnzi',
+      user: emailConfig.smtp.user,
+      pass: emailConfig.smtp.pass,
     },
   });
 
@@ -25,7 +26,7 @@ export async function POST(req: NextRequest) {
     <div style="font-family: Arial, sans-serif; background: #f8fafc; padding: 32px;">
       <div style="max-width: 520px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); padding: 32px 32px 24px 32px;">
         <div style="text-align: center; margin-bottom: 32px;">
-          <img src="https://infinity-analysis.com/Infinity%20Logo%20RGB%20Black.svg" alt="Infinity logo" style="height: 48px; margin-bottom: 8px;" />
+          <img src="https://content.lingacms.nl/upload/sw_220a4a1d/images/logo/infinity-monitoring-amp-consultancy_1_8LVZLY.png" alt="Infinity logo" style="height: 48px; margin-bottom: 8px;" />
         </div>
         <h2 style="color: #111; font-size: 22px; margin-bottom: 24px; text-align: center;">Nieuwe demo aanvraag via de website</h2>
         <table style="width: 100%; font-size: 16px; color: #222; margin-bottom: 24px;">
@@ -55,8 +56,8 @@ export async function POST(req: NextRequest) {
 
   try {
     await transporter.sendMail({
-      from: 'werner.vink@viteco.tech',
-      to: 'w.vink@infinity-monitoring.com, j.tourney@infinity-monitoring.com',
+      from: emailConfig.smtp.user,
+      to: emailConfig.recipients.demo,
       subject: 'Nieuwe demo aanvraag via website',
       text: `Naam: ${firstName} ${lastName}\nEmail: ${email}\nTelefoon: ${phone}\nVoorkeuren: ${preferences.map((p: any, i: number) => `\n${i+1}: ${p.date || ''} ${p.time || ''}`).join('')}\nOpmerkingen: ${comments}`,
       html,
