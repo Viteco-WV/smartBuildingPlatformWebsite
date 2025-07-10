@@ -18,6 +18,11 @@ const Footer = () => (
           <p className="text-gray-500 text-sm">
             Slimme gebouwautomatisering voor optimale prestaties en energiebesparing.
           </p>
+          <img 
+            src="/europese-uni.avif" 
+            alt="Europees Unie logo" 
+            className="mt-4 h-8 w-auto"
+          />
         </div>
         <div className="flex flex-col sm:flex-row gap-8 lg:gap-16">
           <div>
