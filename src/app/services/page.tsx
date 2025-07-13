@@ -160,6 +160,27 @@ export default function ServicesPage() {
           </div>
         </section>
       </main>
+      
+      {/* GACS Blok */}
+      <section className="bg-white">
+        <div className="max-w-6xl mx-auto px-4 pb-16">
+          <div className="bg-black p-12 shadow-lg flex flex-col items-center text-center">
+            <h3 className="font-bold text-xl md:text-2xl mb-4 text-white">
+              Vanaf 1 januari 2026 treedt de nieuwe GACS wetgeving in treding.
+            </h3>
+            <p className="text-white/90 mb-6">
+              Lees op onze GACS pagina hoe wij u opweg kunnen helpen om op korte termijn GACS-compliant te zijn.
+            </p>
+            <RouterLink 
+              href="/gacs" 
+              className="inline-block bg-[#00e886] hover:bg-[#00c46c] text-white font-bold py-3 px-8 rounded-lg text-lg shadow transition-colors"
+            >
+              Ontdek onze aanpak!
+            </RouterLink>
+          </div>
+        </div>
+      </section>
+      
       <SmartBuildingCta />
       <CaseStudiesGallery caseStudies={caseStudies} currentSlide={currentSlide} setCurrentSlide={setCurrentSlide} />
       <ContactSection />

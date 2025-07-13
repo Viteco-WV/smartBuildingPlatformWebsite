@@ -19,7 +19,7 @@ const Footer = () => (
             Slimme gebouwautomatisering voor optimale prestaties en energiebesparing.
           </p>
           <img 
-            src="/europese-uni.avif" 
+            src="/eu-logo.avif" 
             alt="Europees Unie logo" 
             className="mt-4 h-8 w-auto"
           />

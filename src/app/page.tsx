@@ -169,7 +169,9 @@ const SmartBuildingHomepage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-8 text-center">
             <h2 className="text-4xl font-bold text-black mt-2 mb-4">We werken voor je gebouw en voor de mensen die erin zitten</h2>
-            <div className="w-16 h-1 bg-[#00e886] rounded-full mx-auto mb-6"></div>
+            <div className="flex justify-center mb-6">
+              <div className="h-1 w-32 rounded-full bg-gradient-to-r from-[#00e886] via-[#00e88688] to-transparent" />
+            </div>
             <p className="text-gray-600 max-w-4xl mb-10 mx-auto">
               Er zijn veel argumenten om de prestaties van het gebouw inzichtelijk te maken: duurzaam beheer; het voorspelbaar maken van onderhoud; de wens van overheden om Europa klimaatvriendelijker te maken. Al die motieven onderschrijven we. Maar onder de streep werken we voor jou en voor de gebruikers van jouw gebouw.
             </p>
@@ -183,19 +185,41 @@ const SmartBuildingHomepage = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-gray-50 rounded-2xl p-8 shadow-lg flex flex-col items-center text-center">
                 <h3 className="font-bold text-xl mb-2 text-black">Blije gebruikers</h3>
-                <div className="w-12 h-1 bg-[#00e886] rounded-full mb-4"></div>
+                <div className="flex justify-center mb-4">
+                  <div className="h-1 w-12 rounded-full bg-gradient-to-r from-[#00e886] via-[#00e88688] to-transparent" />
+                </div>
                 <p className="text-gray-700">Een gezond binnenklimaat zorgt voor gezonde en productieve gebruikers. We streven naar een vermindering van het ziekteverzuim als gevolg van gebrekkig functionerende installaties. In een gezond gebouw werken blije mensen!</p>
               </div>
               <div className="bg-gray-50 rounded-2xl p-8 shadow-lg flex flex-col items-center text-center">
                 <h3 className="font-bold text-xl mb-2 text-black">Minder kosten</h3>
-                <div className="w-12 h-1 bg-[#00e886] rounded-full mb-4"></div>
+                <div className="flex justify-center mb-4">
+                  <div className="h-1 w-12 rounded-full bg-gradient-to-r from-[#00e886] via-[#00e88688] to-transparent" />
+                </div>
                 <p className="text-gray-700">Als alle onderdelen in een installatie goed hun werk doen, kan dit zorgen voor een substantiële kostenreductie op energieverbruik en onderhoud. En natuurlijk heeft een goed werkende installatie een langere levensduur.</p>
               </div>
               <div className="bg-gray-50 rounded-2xl p-8 shadow-lg flex flex-col items-center text-center">
                 <h3 className="font-bold text-xl mb-2 text-black">Echte verbeteringen</h3>
-                <div className="w-12 h-1 bg-[#00e886] rounded-full mb-4"></div>
+                <div className="flex justify-center mb-4">
+                  <div className="h-1 w-12 rounded-full bg-gradient-to-r from-[#00e886] via-[#00e88688] to-transparent" />
+                </div>
                 <p className="text-gray-700">We controleren alle ruimtes in een gebouw; van de lucht- en watertemperatuur, klepstanden en ventilatiepunten tot het gedrag van de gebruikers. Dat leidt tot inzichten die zorgen voor echte verbetering.</p>
               </div>
+            </div>
+            
+            {/* GACS Blok */}
+            <div className="mt-16 bg-black p-12 shadow-lg flex flex-col items-center text-center">
+              <h3 className="font-bold text-xl md:text-2xl mb-4 text-white">
+                Vanaf 1 januari 2026 treedt de nieuwe GACS wetgeving in treding.
+              </h3>
+              <p className="text-white/90 mb-6">
+                Lees op onze GACS pagina hoe wij u opweg kunnen helpen om op korte termijn GACS-compliant te zijn.
+              </p>
+              <RouterLink 
+                href="/gacs" 
+                className="inline-block bg-[#00e886] hover:bg-[#00c46c] text-white font-bold py-3 px-8 rounded-lg text-lg shadow transition-colors"
+              >
+                Ontdek onze aanpak!
+              </RouterLink>
             </div>
           </div>
         </div>
