@@ -115,27 +115,31 @@ const Vacature1 = () => {
           <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
             <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md relative">
               <button onClick={() => setShowModal(false)} className="absolute top-4 right-4 text-black hover:text-gray-700 text-2xl">&times;</button>
-              <h3 className="text-2xl font-bold mb-4 text-center">Solliciteer direct</h3>
+              <h3 className="text-2xl font-bold mb-4 text-center text-black">Solliciteer direct</h3>
               <form className="space-y-4" onSubmit={handleSubmit}>
                 <div>
-                  <label className="block text-sm font-medium mb-1">Naam</label>
-                  <input type="text" name="name" value={form.name} onChange={handleChange} className="w-full px-4 py-2 border rounded" required />
+                  <label className="block text-sm font-medium mb-1 text-black">Naam</label>
+                  <input type="text" name="name" value={form.name} onChange={handleChange} className="w-full px-4 py-2 border rounded text-black" required />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-1">E-mail</label>
-                  <input type="email" name="email" value={form.email} onChange={handleChange} className="w-full px-4 py-2 border rounded" required />
+                  <label className="block text-sm font-medium mb-1 text-black">E-mail</label>
+                  <input type="email" name="email" value={form.email} onChange={handleChange} className="w-full px-4 py-2 border rounded text-black" required />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-1">Telefoon</label>
-                  <input type="tel" name="phone" value={form.phone} onChange={handleChange} className="w-full px-4 py-2 border rounded" required />
+                  <label className="block text-sm font-medium mb-1 text-black">Telefoon</label>
+                  <input type="tel" name="phone" value={form.phone} onChange={handleChange} className="w-full px-4 py-2 border rounded text-black" required />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-1">Korte motivatie</label>
-                  <textarea name="motivation" value={form.motivation} onChange={handleChange} className="w-full px-4 py-2 border rounded" rows={3} required />
+                  <label className="block text-sm font-medium mb-1 text-black">Korte motivatie</label>
+                  <textarea name="motivation" value={form.motivation} onChange={handleChange} className="w-full px-4 py-2 border rounded text-black" rows={3} required />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-1">Upload je CV (PDF)</label>
-                  <input type="file" name="file" accept="application/pdf" onChange={handleChange} className="w-full" required />
+                  <label className="block text-sm font-medium mb-1 text-black">Upload je CV (PDF)</label>
+                  <label className="w-full flex flex-col items-center px-4 py-6 bg-white text-[#00e886] rounded-lg shadow-md tracking-wide uppercase border border-dashed border-2 border-[#00e886] cursor-pointer hover:bg-[#e6fff5] transition mb-2">
+                    <span className="mt-2 text-base leading-normal font-semibold">Klik om PDF te uploaden</span>
+                    <input type="file" name="file" accept="application/pdf" onChange={handleChange} className="hidden" required />
+                    {form.file && <span className="text-black mt-2">{form.file.name}</span>}
+                  </label>
                 </div>
                 <button type="submit" className="w-full bg-[#00e886] text-white py-3 rounded font-semibold hover:bg-[#00d676] transition" disabled={loading}>
                   {loading ? 'Versturen...' : 'Verstuur sollicitatie'}

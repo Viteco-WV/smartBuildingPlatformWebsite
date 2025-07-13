@@ -73,7 +73,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <div className="font-semibold text-gray-900">Locatie</div>
-                  <div className="text-gray-600"><a href="https://maps.app.goo.gl/1zSjk2WhKqnXqRN5A" target="_blank" rel="noopener noreferrer">Wijkermeerweg 44U, Beverwijk</a></div>
+                  <div className="text-gray-600"><a href="https://maps.app.goo.gl/1zSjk2WhKqnXqRN5A" target="_blank" rel="noopener noreferrer">Wijkermeerweg 44U, 1948NW Beverwijk</a></div>
                 </div>
               </div>
             </div>
@@ -86,7 +86,7 @@ const ContactSection = () => {
                   type="text"
                   value={name}
                   onChange={e => setName(e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 bg-white" 
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 bg-white text-black" 
                   placeholder="Uw naam"
                   required
                 />
@@ -97,7 +97,7 @@ const ContactSection = () => {
                   type="email"
                   value={email}
                   onChange={e => setEmail(e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 bg-white" 
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 bg-white text-black" 
                   placeholder="uw.email@bedrijf.nl"
                   required
                 />
@@ -108,7 +108,7 @@ const ContactSection = () => {
                   type="text"
                   value={organization}
                   onChange={e => setOrganization(e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 bg-white" 
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 bg-white text-black" 
                   placeholder="Uw organisatie"
                 />
               </div>
@@ -118,7 +118,7 @@ const ContactSection = () => {
                   rows={4}
                   value={message}
                   onChange={e => setMessage(e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 bg-white" 
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 bg-white text-black" 
                   placeholder="Vertel ons over uw project..."
                   required
                 ></textarea>

@@ -159,7 +159,7 @@ function MainDemoContent() {
                   required
                   value={formData.firstName}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 bg-white"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 bg-white text-black"
                 />
               </div>
               <div>
@@ -173,7 +173,7 @@ function MainDemoContent() {
                   required
                   value={formData.lastName}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 bg-white"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 bg-white text-black"
                 />
               </div>
             </div>
@@ -189,7 +189,7 @@ function MainDemoContent() {
                 required
                 value={formData.email}
                 onChange={handleInputChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 bg-white"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 bg-white text-black"
               />
             </div>
 
@@ -203,7 +203,7 @@ function MainDemoContent() {
                 name="phone"
                 value={formData.phone}
                 onChange={handleInputChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 bg-white"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 bg-white text-black"
               />
             </div>
 
@@ -217,7 +217,7 @@ function MainDemoContent() {
                 value={formData.comments}
                 onChange={handleInputChange}
                 rows={4}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 bg-white"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 bg-white text-black"
                 placeholder="Beschrijf hier waar u specifiek op in wilt gaan tijdens de demo..."
               />
             </div>
@@ -238,7 +238,7 @@ function MainDemoContent() {
                         onChange={(date: Date | null) => handleDateChange(date, index)}
                         minDate={new Date()}
                         dateFormat="dd/MM/yyyy"
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 bg-white"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 bg-white text-black"
                         placeholderText="Selecteer een datum"
                       />
                       <Calendar className="absolute right-3 top-2.5 h-5 w-5 text-gray-400" />
@@ -251,7 +251,7 @@ function MainDemoContent() {
                     <select
                       value={pref.time}
                       onChange={(e) => handleTimeChange(e.target.value, index)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 bg-white"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 bg-white text-black"
                     >
                       <option value="">Selecteer een tijdstip</option>
                       {timeSlots.map((time) => (

@@ -11,7 +11,10 @@ export const caseStudiesData: CaseStudy[] = [
       'ROI behaald binnen 1 jaar',
       'Proactieve storingsdetectie lijdt tot minder klachten'
     ],
-    image: '/case-studies/atrium-amsterdam.jpg'
+    image: '/case-studies/atrium-amsterdam.jpg',
+    address: 'Strawinskylaan 3051, Amsterdam',
+    area: '34.000 m²',
+    energyLabel: 'A++'
   },
   {
     id: 'roc-mondriaan',
@@ -23,7 +26,10 @@ export const caseStudiesData: CaseStudy[] = [
       'Concretere opvolging van storingen',
       'Transparantie in de werking van de HVAC installatie'
     ],
-    image: '/case-studies/roc-mondriaan.jpg'
+    image: '/case-studies/roc-mondriaan.jpg',
+    address: 'Burgemeester Patijnlaan 35, Den Haag',
+    area: '28.000 m²',
+    energyLabel: 'A+'
   },
   {
     id: 'rijksmuseum-amsterdam',
@@ -35,7 +41,10 @@ export const caseStudiesData: CaseStudy[] = [
       'WKO monitoring rapportages',
       'Real-time monitoring van alle installatie delen'
     ],
-    image: '/case-studies/rijksmuseum-amsterdam.jpg'
+    image: '/case-studies/rijksmuseum-amsterdam.jpg',
+    address: 'Museumstraat 1, Amsterdam',
+    area: '30.000 m²',
+    energyLabel: 'A'
   },
   {
     id: 'huis-van-de-stad-gouda',
@@ -47,10 +56,13 @@ export const caseStudiesData: CaseStudy[] = [
       'Storingsmeldingen vanuit control',
       'Verbeterde energieprestaties (25% besparing)'
     ],
-    image: '/case-studies/huis-van-de-stad-gouda.jpg'
+    image: '/case-studies/huis-van-de-stad-gouda.jpg',
+    address: 'Burgemeester Jamesplein 1, Gouda',
+    area: '22.000 m²',
+    energyLabel: 'A+'
   },
   {
-    id: 'archimedesweg-1-leide',
+    id: 'archimedesweg-1-leiden',
     title: 'Archimedesweg Leiden',
     description: 'Inzicht in prestaties voor Hoogheemraadschap van Rijland.',
     results: [
@@ -59,6 +71,9 @@ export const caseStudiesData: CaseStudy[] = [
       'Rapportage elektra tussenmeters',
       'Geautomatiseerde toetsing energieprestaties'
     ],
-    image: '/case-studies/archimedesweg-1-leiden.jpg'
+    image: '/case-studies/archimedesweg-1-leiden.jpg',
+    address: 'Archimedesweg 1, Leiden',
+    area: '12.000 m²',
+    energyLabel: 'A'
   }
 ]; 

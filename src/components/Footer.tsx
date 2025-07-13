@@ -49,7 +49,7 @@ const Footer = () => (
               <div><a href="https://linkedin.com/company/infinity-monitoring" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
               <div>085 210 4456</div>
               <div>info@infinity-monitoring.com</div>
-              <div><a href="https://maps.app.goo.gl/1zSjk2WhKqnXqRN5A" target="_blank" rel="noopener noreferrer">Wijkermeerweg 44U, Beverwijk</a></div>
+              <div><a href="https://maps.app.goo.gl/1zSjk2WhKqnXqRN5A" target="_blank" rel="noopener noreferrer">Wijkermeerweg 44U, 1948NW Beverwijk</a></div>
             </div>
           </div>
         </div>

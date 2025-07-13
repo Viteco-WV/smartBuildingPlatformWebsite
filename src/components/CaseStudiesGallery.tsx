@@ -8,6 +8,9 @@ export type CaseStudy = {
   description: string;
   results: string[];
   image: string;
+  address: string;
+  area: string;
+  energyLabel: string;
 };
 
 interface CaseStudiesGalleryProps {
