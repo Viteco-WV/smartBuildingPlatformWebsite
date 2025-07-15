@@ -6,8 +6,8 @@ export default function AlgemeneVoorwaardenPage() {
     <div className="min-h-screen bg-white flex flex-col">
       <Header />
       <main className="flex-1 max-w-3xl mx-auto px-4 py-16">
-        <h1 className="text-3xl font-bold mb-8 text-center">Algemene Voorwaarden Infinity Analysis & Consultancy B.V.</h1>
-        <div className="prose prose-lg max-w-none [&_p]:mb-5">
+        <h1 className="text-3xl font-bold mb-8 text-center text-black">Algemene Voorwaarden Infinity Analysis & Consultancy B.V.</h1>
+        <div className="prose prose-lg max-w-none [&_p]:mb-5 text-black">
           <h2 className="mt-10 font-bold">Artikel 1 - Definities</h2>
           <p>Infinity Analysis & Consultancy B.V., gevestigd te Beverwijk, KvK-nummer 67965660, wordt in deze algemene voorwaarden aangeduid als dienstverlener.</p>
           <p>De wederpartij van dienstverlener wordt in deze algemene voorwaarden aangeduid als opdrachtgever.</p>

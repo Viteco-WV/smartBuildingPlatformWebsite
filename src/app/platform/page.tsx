@@ -143,7 +143,7 @@ const PlatformPage = () => {
               Software voor het eenvoudig <span className="text-logo-green">managen</span> van<br />
               jouw <span className="text-logo-green">gebouw prestaties</span>
             </h1>
-            <p className="text-base md:text-lg text-black max-w-4xl mx-auto">
+            <p className="text-base md:text-lg text-gray-600 max-w-4xl mx-auto">
               Het SkySpark platform van Infinity is gericht op het geven van transparantie en controle door eenvoud. Simpele dashboards en rapportages geven je het benodigde inzicht om in control te zijn. Geautomatiseerde analyses houden prestaties in de gaten en maken jou - indien nodig - hier op alert.
             </p>
           </div>
@@ -154,7 +154,7 @@ const PlatformPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-black text-center mb-4">4 praktische modules</h2>
-            <p className="text-center text-black mb-12">
+            <p className="text-center text-gray-600 mb-12">
               Onze standaard modules zijn ontworpen om de efficiëntie te maximaliseren en voldoen aan de meeste gebruikerswensen. Heeft u specifieke wensen? Wij kunnen modules aanpassen op het gebied van dashboards, rapportages en analyses zodat het platform perfect aansluit op uw organisatie.
             </p>
           </div>
@@ -225,10 +225,10 @@ const PlatformPage = () => {
       <section className="pt-4 pb-12 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl font-bold text-black mb-4">Powered by SkySpark&reg; van SkyFoundry</h2>
-          <p className="text-lg text-black mb-2">
+          <p className="text-lg text-gray-600 mb-2">
             Ons platform maakt gebruik van <strong>SkySpark&reg;</strong> van SkyFoundry als onderliggende software. SkySpark is wereldwijd toonaangevend op het gebied van data-analyse en gebouwbeheer. Dankzij deze technologie kunnen wij geavanceerde analyses, foutdetectie en optimalisatie van gebouwprestaties bieden.
           </p>
-          <p className="text-lg text-black">
+          <p className="text-lg text-gray-600">
             Door de kracht van SkySpark te combineren met onze eigen expertise, bieden wij een flexibel, schaalbaar en toekomstbestendig smart building platform voor elk type gebouw.
           </p>
         </div>
@@ -239,7 +239,7 @@ const PlatformPage = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#00e886] mb-2">Implementatie</h2>
             <h3 className="text-4xl font-bold text-black mb-4">In vijf stappen naar een slim gebouw</h3>
-            <p className="text-lg text-black max-w-3xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               We helpen eindgebruikers, installateurs, regeltechnische partijen en adviseurs bij het creëren van slimme gebouwen met een gezond binnenklimaat en substantiële kostenreductie op energieverbruik en onderhoud.
             </p>
           </div>

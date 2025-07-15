@@ -68,17 +68,17 @@ export default function ServicesPage() {
               <div className="flex md:justify-end justify-center items-center w-full relative min-h-[180px]">
                 <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
                   <div className="w-20 h-20 rounded-full bg-black flex items-center justify-center">
-                    <Wifi className="h-10 w-10 text-[#00e886]" />
+                    <Phone className="h-10 w-10 text-[#00e886]" />
                   </div>
                 </div>
                 <div className="bg-gray-50 rounded-xl p-8 shadow-lg w-full max-w-md md:ml-auto md:mr-0 mr-auto flex flex-col items-start relative z-20">
                   <div className="md:hidden mb-4">
                     <div className="w-16 h-16 rounded-full bg-black flex items-center justify-center mx-auto">
-                      <Wifi className="h-8 w-8 text-[#00e886]" />
+                      <Phone className="h-8 w-8 text-[#00e886]" />
                     </div>
                   </div>
                   <h2 className="text-xl font-semibold mb-2 text-gray-900 text-left w-full">Remote beheer</h2>
-                  <p className="text-gray-600">Wij ondersteunen structureel in het technisch facility management omtrent jouw energie en HVAC installaties. Wanneer er <RouterLink href="#" className="text-emerald-400 underline">opmerkelijkheden worden geïdentificeerd</RouterLink> door het platform nemen wij een leidinggevende rol in de communicatie met technische partners en managen het proces van het <RouterLink href="#" className="text-emerald-400 underline">doorvoeren</RouterLink> van technische verbetermaatregelen.</p>
+                  <p className="text-gray-600">Wij ondersteunen structureel in het technisch facility management omtrent jouw energie en HVAC installaties. Wanneer er <RouterLink href="#" className="text-gray-600 underline">opmerkelijkheden worden geïdentificeerd</RouterLink> door het platform nemen wij een leidinggevende rol in de communicatie met technische partners en managen het proces van het <RouterLink href="#" className="text-gray-600 underline">doorvoeren</RouterLink> van technische verbetermaatregelen.</p>
                 </div>
               </div>
               {/* Blok 3 */}
@@ -95,7 +95,7 @@ export default function ServicesPage() {
                     </div>
                   </div>
                   <h2 className="text-xl font-semibold mb-2 text-gray-900 text-left w-full">Energie prestatie advies</h2>
-                  <p className="text-gray-600">Data van energiemeters zijn er in overvloed. Het effectief analyseren van deze data laat vaak nog te wensen over. Wil je <RouterLink href="#" className="text-emerald-400 underline">onafhankelijk</RouterLink> over jouw energieprestaties op basis van metadata? Dan kunnen wij je helpen met een kort <RouterLink href="#" className="text-emerald-400 underline">traject</RouterLink> van inzicht en tips om het verbruik te <RouterLink href="#" className="text-emerald-400 underline">optimaliseren</RouterLink>. Je kan zelf al beginnen middels onze energievrepsiller check.</p>
+                  <p className="text-gray-600">Energiemeters leveren enorme hoeveelheden data op, maar de analyse ervan blijft vaak achter. Wil je <RouterLink href="#" className="text-gray-600 underline">onafhankelijk inzicht</RouterLink> in jouw energieprestaties op basis van betrouwbare meetdata? Wij helpen je met een <RouterLink href="#" className="text-gray-600 underline">gestructureerd traject</RouterLink> van analyse en concrete tips om je verbruik te <RouterLink href="#" className="text-gray-600 underline">optimaliseren</RouterLink>. Begin direct met onze gratis energiecheck via <a href="https://www.verspillingsanalyse.nl/" target="_blank" rel="noopener noreferrer" className="text-[#00e886] font-bold underline hover:text-[#00c46c] transition-colors">verspillingsanalyse.nl</a>.</p>
                 </div>
               </div>
               {/* Blok 4 */}
@@ -112,7 +112,7 @@ export default function ServicesPage() {
                     </div>
                   </div>
                   <h2 className="text-xl font-semibold mb-2 text-gray-900 text-left w-full">Meet- & regeltechniek advies</h2>
-                  <p className="text-gray-600">Voor zowel bestaande als nieuw te bouwen installaties bieden wij onafhankelijk advies over de meet- en regel <RouterLink href="#" className="text-emerald-400 underline">hardware en software</RouterLink>. Hier kijken wij onder andere naar de opzet van regelkringen, hardware keuzes en de software programmering. Daarnaast bieden wij een 1-daagse opname of u voldoet aan de <RouterLink href="#" className="text-emerald-400 underline">GACS wetgeving</RouterLink>.</p>
+                  <p className="text-gray-600">Voor zowel bestaande als nieuw te bouwen installaties bieden wij onafhankelijk advies over de meet- en regel <RouterLink href="#" className="text-gray-600 underline">hardware en software</RouterLink>. Hier kijken wij onder andere naar de opzet van regelkringen, hardware keuzes en de software programmering. Daarnaast bieden wij een 1-daagse opname of u voldoet aan de <RouterLink href="/gacs" className="text-[#00e886] font-bold underline hover:text-[#00c46c] transition-colors">GACS wetgeving</RouterLink>.</p>
                 </div>
               </div>
             </div>
@@ -133,11 +133,11 @@ export default function ServicesPage() {
             <div className="bg-gray-50 rounded-xl p-8 shadow-lg w-full max-w-md mx-auto flex flex-col items-center text-center relative z-10">
               <div className="mb-4">
                 <div className="w-16 h-16 rounded-full bg-black flex items-center justify-center mx-auto">
-                  <Wifi className="h-8 w-8 text-[#00e886]" />
+                  <Phone className="h-8 w-8 text-[#00e886]" />
                 </div>
               </div>
               <h2 className="text-xl font-semibold mb-2 text-gray-900">Remote beheer</h2>
-              <p className="text-gray-600">Wij ondersteunen structureel in het technisch facility management omtrent jouw energie en HVAC installaties. Wanneer er <RouterLink href="#" className="text-emerald-400 underline">opmerkelijkheden worden geïdentificeerd</RouterLink> door het platform nemen wij een leidinggevende rol in de communicatie met technische partners en managen het proces van het <RouterLink href="#" className="text-emerald-400 underline">doorvoeren</RouterLink> van technische verbetermaatregelen.</p>
+              <p className="text-gray-600">Wij ondersteunen structureel in het technisch facility management omtrent jouw energie en HVAC installaties. Wanneer er <RouterLink href="#" className="text-gray-600 underline">opmerkelijkheden worden geïdentificeerd</RouterLink> door het platform nemen wij een leidinggevende rol in de communicatie met technische partners en managen het proces van het <RouterLink href="#" className="text-gray-600 underline">doorvoeren</RouterLink> van technische verbetermaatregelen.</p>
             </div>
             <div className="bg-gray-50 rounded-xl p-8 shadow-lg w-full max-w-md mx-auto flex flex-col items-center text-center relative z-10">
               <div className="mb-4">
@@ -146,7 +146,7 @@ export default function ServicesPage() {
                 </div>
               </div>
               <h2 className="text-xl font-semibold mb-2 text-gray-900">Energie prestatie advies</h2>
-              <p className="text-gray-600">Data van energiemeters zijn er in overvloed. Het effectief analyseren van deze data laat vaak nog te wensen over. Wil je <RouterLink href="#" className="text-emerald-400 underline">onafhankelijk</RouterLink> over jouw energieprestaties op basis van metadata? Dan kunnen wij je helpen met een kort <RouterLink href="#" className="text-emerald-400 underline">traject</RouterLink> van inzicht en tips om het verbruik te <RouterLink href="#" className="text-emerald-400 underline">optimaliseren</RouterLink>. Je kan zelf al beginnen middels onze energievrepsiller check.</p>
+              <p className="text-gray-600">Energiemeters leveren enorme hoeveelheden data op, maar de analyse ervan blijft vaak achter. Wil je <RouterLink href="#" className="text-gray-600 underline">onafhankelijk inzicht</RouterLink> in jouw energieprestaties op basis van betrouwbare meetdata? Wij helpen je met een <RouterLink href="#" className="text-gray-600 underline">gestructureerd traject</RouterLink> van analyse en concrete tips om je verbruik te <RouterLink href="#" className="text-gray-600 underline">optimaliseren</RouterLink>. Begin direct met onze gratis energiecheck via <a href="https://www.verspillingsanalyse.nl/" target="_blank" rel="noopener noreferrer" className="text-[#00e886] font-bold underline hover:text-[#00c46c] transition-colors">verspillingsanalyse.nl</a>.</p>
             </div>
             <div className="bg-gray-50 rounded-xl p-8 shadow-lg w-full max-w-md mx-auto flex flex-col items-center text-center relative z-10">
               <div className="mb-4">
@@ -155,7 +155,7 @@ export default function ServicesPage() {
                 </div>
               </div>
               <h2 className="text-xl font-semibold mb-2 text-gray-900">Meet- & regeltechniek advies</h2>
-              <p className="text-gray-600">Voor zowel bestaande als nieuw te bouwen installaties bieden wij onafhankelijk advies over de meet- en regel <RouterLink href="#" className="text-emerald-400 underline">hardware en software</RouterLink>. Hier kijken wij onder andere naar de opzet van regelkringen, hardware keuzes en de software programmering. Daarnaast bieden wij een 1-daagse opname of u voldoet aan de <RouterLink href="#" className="text-emerald-400 underline">GACS wetgeving</RouterLink>.</p>
+              <p className="text-gray-600">Voor zowel bestaande als nieuw te bouwen installaties bieden wij onafhankelijk advies over de meet- en regel <RouterLink href="#" className="text-gray-600 underline">hardware en software</RouterLink>. Hier kijken wij onder andere naar de opzet van regelkringen, hardware keuzes en de software programmering. Daarnaast bieden wij een 1-daagse opname of u voldoet aan de <RouterLink href="/gacs" className="text-[#00e886] font-bold underline hover:text-[#00c46c] transition-colors">GACS wetgeving</RouterLink>.</p>
             </div>
           </div>
         </section>

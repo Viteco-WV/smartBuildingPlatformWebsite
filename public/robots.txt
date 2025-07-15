@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://infinity.nl/sitemap.xml
+
+# Disallow admin areas (if any)
+Disallow: /api/
+Disallow: /admin/
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1 

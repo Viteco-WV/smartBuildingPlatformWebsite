@@ -49,7 +49,7 @@ export default function CarrierePage() {
       </div>
       <main className="flex-1 max-w-7xl mx-auto px-4 py-16">
         <h1 className="text-4xl font-bold mb-8 text-center text-black">Werken bij Infinity</h1>
-        <p className="text-xl text-black mb-12 text-center">Wil jij bijdragen aan slimme, duurzame gebouwen? Bekijk onze vacatures en solliciteer direct!</p>
+        <p className="text-xl text-gray-600 mb-12 text-center">Wil jij bijdragen aan slimme, duurzame gebouwen? Bekijk onze vacatures en solliciteer direct!</p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {vacatures.map((v, i) => {
             const Icon = v.icon;
@@ -60,7 +60,7 @@ export default function CarrierePage() {
                     <Icon className="h-8 w-8 text-white" />
                   </div>
                   <h2 className="text-2xl font-bold text-white mb-2">{v.title}</h2>
-                  <p className="text-white/80 mb-6">{v.description}</p>
+                  <p className="text-white/70 mb-6">{v.description}</p>
                 </div>
                 <Link
                   href={v.url}

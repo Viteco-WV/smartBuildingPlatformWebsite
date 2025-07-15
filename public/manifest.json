@@ -1,0 +1,27 @@
+{
+  "name": "Infinity - Smart Building Platform",
+  "short_name": "Infinity",
+  "description": "Infinity biedt innovatieve smart building oplossingen en GACS-compliant diensten voor duurzame gebouwen.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#10b981",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/Infinity Logo RGB Black.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/Infinity Logo RGB White.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["business", "productivity", "utilities"],
+  "lang": "nl",
+  "dir": "ltr"
+} 
