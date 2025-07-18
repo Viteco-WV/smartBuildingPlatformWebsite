@@ -59,6 +59,13 @@ const BedrijfPage = () => {
       description: "Verantwoordelijk voor technische implementaties en het oplossen van complexe vraagstukken binnen projecten.",
       image: "MT",
       expertise: ["Techniek", "Implementatie", "Probleemoplossing"]
+    },
+    {
+      name: "Quinn Vledder",
+      role: "Jr. Developer / Jr. Data Scientist",
+      description: "Verantwoordelijk voor het ontwikkelen van data-analyse tools en het ondersteunen van machine learning projecten.",
+      image: "QV",
+      expertise: ["Data Science", "Machine Learning", "Software Development"]
     }
   ];
 
@@ -221,34 +228,18 @@ const BedrijfPage = () => {
             <p className="text-xl text-gray-600">De experts achter Infinity</p>
           </div>
 
-          {/* Custom grid: eerste rij 3 gecentreerd, tweede rij 4 */}
-          <div className="flex flex-col gap-12 items-center">
-            {/* Eerste rij: 3 personen gecentreerd */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 w-full justify-center max-w-4xl mx-auto">
-              {teamMembers.slice(0, 3).map((member, index) => (
-                <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow flex flex-col items-center text-center">
-                  <div className="w-24 h-24 bg-gradient-to-r from-emerald-400 to-green-500 rounded-full flex items-center justify-center text-white font-bold text-2xl mb-4">
-                    {member.image}
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-1">{member.name}</h3>
-                  <div className="text-emerald-600 font-semibold mb-3">{member.role}</div>
-                  <p className="text-gray-600 mb-4 text-sm leading-relaxed">{member.description}</p>
+          {/* Twee rijen van 4 team members */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 w-full max-w-6xl mx-auto">
+            {teamMembers.map((member, index) => (
+              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow flex flex-col items-center text-center">
+                <div className="w-24 h-24 bg-gradient-to-r from-emerald-400 to-green-500 rounded-full flex items-center justify-center text-white font-bold text-2xl mb-4">
+                  {member.image}
                 </div>
-              ))}
-            </div>
-            {/* Tweede rij: 4 personen */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 w-full max-w-6xl mx-auto">
-              {teamMembers.slice(3).map((member, index) => (
-                <div key={index + 3} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow flex flex-col items-center text-center">
-                  <div className="w-24 h-24 bg-gradient-to-r from-emerald-400 to-green-500 rounded-full flex items-center justify-center text-white font-bold text-2xl mb-4">
-                    {member.image}
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-1">{member.name}</h3>
-                  <div className="text-emerald-600 font-semibold mb-3">{member.role}</div>
-                  <p className="text-gray-600 mb-4 text-sm leading-relaxed">{member.description}</p>
-                </div>
-              ))}
-            </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-1">{member.name}</h3>
+                <div className="text-emerald-600 font-semibold mb-3">{member.role}</div>
+                <p className="text-gray-600 mb-4 text-sm leading-relaxed">{member.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

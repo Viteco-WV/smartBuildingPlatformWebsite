@@ -1,0 +1,138 @@
+[
+  {
+    "id": "atrium-amsterdam-gacs",
+    "title": "Atrium Zuidas",
+    "description": "Modern kantoorgebouw in Amsterdam dat GACS compliant is gemaakt met behulp van onze dienstverlening en 25% besparing realiseerde op HVAC gerelateerd energievebruik.",
+    "results": [
+      "GACS compliant vanaf 2026",
+      "25% energiebesparing op jaarbasis",
+      "Onderhoudproces datagedreven gemaakt",
+      "ROI behaald binnen 1 jaar",
+      "Proactieve storingsdetectie lijdt tot minder klachten"
+    ],
+    "image": "/case-studies/atrium-amsterdam.jpg",
+    "address": "Strawinskylaan 3051, Amsterdam",
+    "area": "34.000 m²",
+    "energyLabel": "A++",
+    "gacsClass": "C"
+  },
+  {
+    "id": "roc-mondriaan-gacs",
+    "title": "ROC Mondriaan",
+    "description": "Voor 20+ gebouwen ondersteund Infinity het facility management team in het dagelijks beheer van de energie & HVAC installaties vanuit monitoring en GACS compliance.",
+    "results": [
+      "GACS compliant voor alle locaties",
+      "Lagere energiekosten",
+      "Verbeterde luchtkwaliteit",
+      "Concretere opvolging van storingen",
+      "Transparantie in de werking van de HVAC installatie"
+    ],
+    "image": "/case-studies/roc-mondriaan.jpg",
+    "address": "Burgemeester Patijnlaan 35, Den Haag",
+    "area": "28.000 m²",
+    "energyLabel": "A+",
+    "gacsClass": "C"
+  },
+  {
+    "id": "rijksmuseum-amsterdam-gacs",
+    "title": "Rijksmuseum Amsterdam",
+    "description": "Het SkySpark platform ingericht op de volledige HVAC installatie voor FDD analyses, optimalisatie en GACS compliance.",
+    "results": [
+      "GACS compliant vanaf 2026",
+      "Efficient verbruik van energie",
+      "Nauwkeurige binnenklimaat monitoring",
+      "WKO monitoring rapportages",
+      "Real-time monitoring van alle installatie delen"
+    ],
+    "image": "/case-studies/rijksmuseum-amsterdam.jpg",
+    "address": "Museumstraat 1, Amsterdam",
+    "area": "30.000 m²",
+    "energyLabel": "A",
+    "gacsClass": "C"
+  },
+  {
+    "id": "huis-van-de-stad-gouda-gacs",
+    "title": "Huis van de Stad Gouda",
+    "description": "Gemeentehuis waar middels Infinity's services het energieverbruik, werking HVAC en comfort is geoptimaliseerd en GACS compliant gemaakt.",
+    "results": [
+      "GACS compliant vanaf 2026",
+      "Optimalisatie vrijgaven luchtbehandeling",
+      "WKO en EBS rapportages",
+      "Storingsmeldingen vanuit control",
+      "Verbeterde energieprestaties (25% besparing)"
+    ],
+    "image": "/case-studies/huis-van-de-stad-gouda.jpg",
+    "address": "Burgemeester Jamesplein 1, Gouda",
+    "area": "22.000 m²",
+    "energyLabel": "A+",
+    "gacsClass": "C"
+  },
+  {
+    "id": "archimedesweg-1-leiden-gacs",
+    "title": "Archimedesweg Leiden",
+    "description": "Inzicht in prestaties voor Hoogheemraadschap van Rijland met volledige GACS compliance.",
+    "results": [
+      "GACS compliant vanaf 2026",
+      "Ontzorging WKO rapportages",
+      "Volledig geautomatiseerde binnenklimaat monitoring",
+      "Rapportage elektra tussenmeters",
+      "Geautomatiseerde toetsing energieprestaties"
+    ],
+    "image": "/case-studies/archimedesweg-1-leiden.jpg",
+    "address": "Archimedesweg 1, Leiden",
+    "area": "12.000 m²",
+    "energyLabel": "A",
+    "gacsClass": "C"
+  },
+  {
+    "id": "eindhoven-university-gacs",
+    "title": "TU Eindhoven",
+    "description": "Universiteitsgebouw met geavanceerde HVAC systemen die GACS compliant zijn gemaakt met SkySpark EMS.",
+    "results": [
+      "GACS compliant vanaf 2026",
+      "Geavanceerde FDD analyses",
+      "Machine learning optimalisatie",
+      "Real-time energie monitoring",
+      "Automatische rapportages voor compliance"
+    ],
+    "image": "/case-studies/atrium-amsterdam.jpg",
+    "address": "Den Dolech 2, Eindhoven",
+    "area": "45.000 m²",
+    "energyLabel": "A++",
+    "gacsClass": "D"
+  },
+  {
+    "id": "rotterdam-harbor-gacs",
+    "title": "Rotterdam Harbor Office",
+    "description": "Havenkantoor met complexe HVAC systemen die volledig GACS compliant zijn gemaakt.",
+    "results": [
+      "GACS compliant vanaf 2026",
+      "Complexe HVAC monitoring",
+      "Energie optimalisatie 30%",
+      "Proactieve storingsdetectie",
+      "Compliance rapportages automatisch"
+    ],
+    "image": "/case-studies/roc-mondriaan.jpg",
+    "address": "Wilhelminakade 909, Rotterdam",
+    "area": "18.000 m²",
+    "energyLabel": "A+",
+    "gacsClass": "C"
+  },
+  {
+    "id": "utrecht-central-gacs",
+    "title": "Utrecht Centraal Station",
+    "description": "Transport hub met grote HVAC installaties die GACS compliant zijn gemaakt voor optimale energie-efficiëntie.",
+    "results": [
+      "GACS compliant vanaf 2026",
+      "Grote HVAC systemen gemonitord",
+      "Energie besparing 35%",
+      "Comfort optimalisatie",
+      "Automatische compliance checks"
+    ],
+    "image": "/case-studies/rijksmuseum-amsterdam.jpg",
+    "address": "Stationshal 1, Utrecht",
+    "area": "55.000 m²",
+    "energyLabel": "A",
+    "gacsClass": "D"
+  }
+] 
